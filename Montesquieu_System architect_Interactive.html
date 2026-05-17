@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Montesquieu : L'Architecte Système</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/black.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .reveal h1, .reveal h2, .reveal h3 { font-family: 'Cinzel', serif; text-transform: none; color: #d4af37; }
+        .reveal p, .reveal li { font-family: 'Lato', sans-serif; }
+        
+        /* Interactive Cards */
+        .card {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid #d4af37;
+            border-radius: 10px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-block;
+            width: 45%;
+            margin: 10px;
+            vertical-align: top;
+        }
+        .card:hover { background: rgba(212, 175, 55, 0.2); transform: translateY(-5px); }
+        .hidden-answer { display: none; margin-top: 15px; color: #48bb78; font-weight: bold; border-top: 1px dashed #666; padding-top: 10px;}
+        
+        /* Comparison Table */
+        .comparison { display: flex; gap: 20px; }
+        .col { flex: 1; padding: 20px; background: #222; border-radius: 8px; }
+        .col h4 { color: #63b3ed; }
+        .vs { align-self: center; font-weight: bold; color: #d4af37; font-size: 2em; }
+
+        /* Quiz Button */
+        .quiz-btn {
+            background: #d4af37; color: #000; border: none; padding: 10px 20px;
+            font-size: 1rem; border-radius: 5px; cursor: pointer; margin: 5px;
+        }
+        .quiz-feedback { margin-top: 10px; font-size: 0.8em; }
+    </style>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+
+        <!-- SLIDE 1 : TITRE -->
+        <section>
+            <h1>Montesquieu</h1>
+            <h3>Architecte Système de l'État</h3>
+            <p style="font-size: 0.6em; color: #888;">POL 2508 - Université d'Ottawa</p>
+            <div style="margin-top: 30px;">
+                <i class="fas fa-server fa-3x" style="color:#d4af37;"></i>
+                <i class="fas fa-balance-scale fa-3x" style="color:#d4af37; margin-left: 20px;"></i>
+            </div>
+        </section>
+
+        <!-- SLIDE 2 : MENU (NAVIGATION) -->
+        <section>
+            <h2>Plan de la séance</h2>
+            <p>Cliquez pour naviguer :</p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <a href="#/2" class="card">1. Le Malentendu (Liberté)</a>
+                <a href="#/4" class="card">2. La Mécanique (Pouvoirs)</a>
+                <a href="#/6" class="card">3. Application (GAFAM)</a>
+                <a href="#/8" class="card">4. Quiz Rapide</a>
+            </div>
+        </section>
+
+        <!-- SLIDE 3 : DEFINITION INTERACTIVE -->
+        <section>
+            <h2>Qu'est-ce que la Liberté ?</h2>
+            <p>Selon vous, être libre, c'est :</p>
+            
+            <div class="card" onclick="this.querySelector('.hidden-answer').style.display='block'">
+                <i class="fas fa-fist-raised"></i><br>
+                Faire tout ce que je veux ?<br>
+                (Indépendance)
+                <div class="hidden-answer">NON. Ça, c'est l'Indépendance. Si tout le monde fait ça, c'est le chaos.</div>
+            </div>
+
+            <div class="card" onclick="this.querySelector('.hidden-answer').style.display='block'">
+                <i class="fas fa-shield-alt"></i><br>
+                Faire ce que les lois permettent ?<br>
+                (Sûreté)
+                <div class="hidden-answer">OUI. C'est la sécurité juridique. Savoir que personne ne peut me forcer illégalement.</div>
+            </div>
+        </section>
+
+        <!-- SLIDE 4 : LE MECANISME -->
+        <section>
+            <h2>"Le Pouvoir arrête le Pouvoir"</h2>
+            <p>Le pessimisme anthropologique de Montesquieu :</p>
+            <blockquote style="background: #333; padding: 20px; border-left: 5px solid #d4af37;">
+                "C'est une expérience éternelle que tout homme qui a du pouvoir est porté à en abuser."
+            </blockquote>
+            <p class="fragment">Il ne faut pas compter sur la <strong>Vertu</strong> (comme Platon), mais sur l'<strong>Architecture</strong>.</p>
+        </section>
+
+        <!-- SLIDE 5 : COMPARATIF -->
+        <section>
+            <h2>L'Architecte vs L'Ingénieur de Crise</h2>
+            <div class="comparison">
+                <div class="col fragment">
+                    <h4><i class="fas fa-fire"></i> Machiavel</h4>
+                    <p><strong>Rôle :</strong> Crisis Manager</p>
+                    <p><strong>But :</strong> Sauver l'État de la mort</p>
+                    <p><strong>Moyen :</strong> Force & Ruse</p>
+                </div>
+                <div class="vs">VS</div>
+                <div class="col fragment">
+                    <h4><i class="fas fa-drafting-compass"></i> Montesquieu</h4>
+                    <p><strong>Rôle :</strong> System Architect</p>
+                    <p><strong>But :</strong> Empêcher le despotisme</p>
+                    <p><strong>Moyen :</strong> Équilibre des pouvoirs</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 6 : APPLICATION GAFAM -->
+        <section>
+            <h2>Facebook : Un État Despotique ?</h2>
+            <p>Analysons Meta avec la grille de Montesquieu.</p>
+            
+            <div style="text-align: left; font-size: 0.8em;">
+                <p class="fragment">1. <strong>Législatif :</strong> Qui écrit les "Standards de la communauté" ? <span style="color:#d4af37">Mark Zuckerberg.</span></p>
+                <p class="fragment">2. <strong>Exécutif :</strong> Qui applique le bannissement ? <span style="color:#d4af37">Les algos de Zuckerberg.</span></p>
+                <p class="fragment">3. <strong>Judiciaire :</strong> Qui juge mon appel ? <span style="color:#d4af37">Des employés de Zuckerberg.</span></p>
+            </div>
+            
+            <div class="fragment" style="background: #8e2b24; padding: 15px; margin-top: 20px; border-radius: 5px;">
+                <strong>Verdict :</strong> "Tout serait perdu si le même homme exerçait ces trois pouvoirs." (Livre XI, Chap 6)
+            </div>
+        </section>
+
+        <!-- SLIDE 7 : QUIZ INTERACTIF -->
+        <section>
+            <h2>Quiz de Vérification</h2>
+            <p>La "Liberté Politique" chez Montesquieu, c'est...</p>
+            
+            <button class="quiz-btn" onclick="checkAnswer(this, false)">Le droit de vote pour tous</button>
+            <button class="quiz-btn" onclick="checkAnswer(this, true)">La tranquillité d'esprit (Sûreté)</button>
+            <button class="quiz-btn" onclick="checkAnswer(this, false)">L'absence de lois</button>
+
+            <div id="feedback" class="quiz-feedback"></div>
+        </section>
+
+        <!-- SLIDE 8 : CONCLUSION -->
+        <section>
+            <h2>Conclusion</h2>
+            <ul>
+                <li>La liberté est artificielle (construite par la loi).</li>
+                <li>Le numérique a besoin d'un "Moment Montesquieu" (Séparation des pouvoirs).</li>
+            </ul>
+            <h3 style="margin-top: 50px; color: #d4af37;">À lundi !</h3>
+            <p><small>(N'oubliez pas votre réflexion sur Brightspace avant le cours)</small></p>
+        </section>
+
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+<script>
+    Reveal.initialize({
+        hash: true,
+        slideNumber: true,
+        transition: 'convex' // Animations: none/fade/slide/convex/concave/zoom
+    });
+
+    function checkAnswer(btn, isCorrect) {
+        const feedback = document.getElementById('feedback');
+        if(isCorrect) {
+            btn.style.background = "#48bb78"; // Green
+            feedback.innerHTML = "✅ EXACT ! C'est la sécurité psychologique de ne pas avoir peur du pouvoir.";
+            feedback.style.color = "#48bb78";
+        } else {
+            btn.style.background = "#e53e3e"; // Red
+            feedback.innerHTML = "❌ Non. Montesquieu se méfie de la démocratie pure et l'absence de loi est la tyrannie.";
+            feedback.style.color = "#e53e3e";
+        }
+    }
+</script>
+</body>
+</html>
